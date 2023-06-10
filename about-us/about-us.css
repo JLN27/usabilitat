@@ -1,0 +1,87 @@
+
+/* Estilos para el contenedor de los miembros del equipo */
+.team-members {
+  display: flex; /* Configura el contenedor de los miembros del equipo como un flexbox */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a medida que se llenan */
+  justify-content: center; /* Centra horizontalmente los elementos */
+}
+
+/* Estilos para cada miembro del equipo */
+.team-member {
+  display: flex; /* Configura cada miembro del equipo como un flexbox */
+  flex-direction: column; /* Apila los elementos en una columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  text-align: center; /* Centra el texto horizontalmente */
+  margin: 20px; /* Establece un margen de 20 píxeles alrededor del miembro del equipo */
+}
+
+/* Estilos para las imágenes de los miembros del equipo */
+.team-member img {
+  width: 200px; /* Establece el ancho de la imagen en 200 píxeles */
+  height: 200px; /* Establece la altura de la imagen en 200 píxeles */
+}
+
+/* Estilos para el miembro "Jesus" */
+.jesus {
+  width: 534px; /* Establece el ancho del miembro "Jesus" en 534 píxeles */
+  height: 640px; /* Establece la altura del miembro "Jesus" en 640 píxeles */
+  filter: grayscale(100%); /* Aplica una escala de grises al miembro "Jesus" */
+  background: url("/media/sprite.png") no-repeat; /* Establece la imagen de fondo del miembro "Jesus" desde la ruta "/media/sprite.png" sin repetición */
+  background-position: -538px 0; /* Establece la posición de fondo del miembro "Jesus" en -538 píxeles en el eje x y 0 píxeles en el eje y */
+  transition: transform 0.5s ease-in-out; /* Agrega una transición suave de 0.5 segundos al transformar el miembro "Jesus" */
+  cursor: pointer; /* Cambia el cursor al puntero al pasar por encima del miembro "Jesus" */
+}
+
+.jesus:hover {
+  background: url("/media/sprite.png") no-repeat; /* Establece la imagen de fondo del miembro "Jesus" al pasar por encima */
+  filter: grayscale(0%); /* Elimina la escala de grises al pasar por encima del miembro "Jesus" */
+  filter: contrast(150%); /* Aplica un aumento de contraste al miembro "Jesus" al pasar por encima */
+  transform: rotateX(360deg); /* Rota el miembro "Jesus" 360 grados en el eje X al pasar por encima */
+}
+
+/* Estilos para el miembro "Arnau" */
+.arnau {
+  width: 534px; /* Establece el ancho del miembro "Arnau" en 534 píxeles */
+  height: 640px; /* Establece la altura del miembro "Arnau" en 640 píxeles */
+  filter: grayscale(100%); /* Aplica una escala de grises al miembro "Arnau" */
+  background: url("/media/sprite.png") no-repeat; /* Establece la imagen de fondo del miembro "Arnau" desde la ruta "/media/sprite.png" sin repetición */
+  transition: transform 0.5s ease-in-out; /* Agrega una transición suave de 0.5 segundos al transformar el miembro "Arnau" */
+  cursor: pointer; /* Cambia el cursor al puntero al pasar por encima del miembro "Arnau" */
+}
+
+.arnau:hover {
+  background: url("/media/sprite.png") no-repeat; /* Establece la imagen de fondo del miembro "Arnau" al pasar por encima */
+  background-position: -538px 0; /* Establece la posición de fondo del miembro "Arnau" en -538 píxeles en el eje x y 0 píxeles en el eje y */
+  filter: grayscale(0%); /* Elimina la escala de grises al pasar por encima del miembro "Arnau" */
+  filter: contrast(150%); /* Aplica un aumento de contraste al miembro "Arnau" al pasar por encima */
+  transform: rotateY(360deg); /* Rota el miembro "Arnau" 360 grados en el eje Y al pasar por encima */
+}
+
+/* Estilos para ocultar el texto "Jesus" cuando se hace hover en el miembro */
+.team-member:hover .text-jesus {
+  visibility: hidden; /* Oculta el texto con la clase "text-jesus" al pasar por encima del miembro del equipo */
+}
+
+/* Estilos para mostrar el texto "Lolero" después de ocultar "Jesus" */
+.team-member:hover .text-jesus::after {
+  content: "Lolero"; /* Agrega el texto "Lolero" después del elemento con la clase "text-jesus" al pasar por encima del miembro del equipo */
+  visibility: visible; /* Hace visible el texto después de ocultar "Jesus" */
+}
+
+/* Estilos para ocultar el texto "Arnau" cuando se hace hover en el miembro */
+.team-member:hover .text-arnau {
+  visibility: hidden; /* Oculta el texto con la clase "text-arnau" al pasar por encima del miembro del equipo */
+}
+
+/* Estilos para mostrar el texto "Gymbro" después de ocultar "Arnau" */
+.team-member:hover .text-arnau::after {
+  content: "Gymbro"; /* Agrega el texto "Gymbro" después del elemento con la clase "text-arnau" al pasar por encima del miembro del equipo */
+  visibility: visible; /* Hace visible el texto después de ocultar "Arnau" */
+}
+
+/* Estilos para los videos modales */
+.modal-video {
+  width: 100%; /* Establece el ancho de los videos modales al 100% */
+  height: auto; /* Ajusta automáticamente la altura de los videos modales */
+  max-height: 80vh; /* Establece la altura máxima de los videos modales al 80% de la altura de la ventana */
+}

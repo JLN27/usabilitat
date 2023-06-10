@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sobre nosaltres</title>
+  <!-- Enlace a los css -->
+  <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="about-us.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+    
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/about-us/about-us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contacte/contacte.html">Contacte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="archivo3.html">Botón 3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="archivo4.html">Botón 4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="team-members" ondragover="allowDrop(event)" ondrop="drop(event)">
+    <!-- Miembro del equipo: Jesús -->
+    <div class="team-member" data-bs-toggle="modal" data-bs-target="#jesusModal" draggable="true" ondragstart="drag(event)">
+        <div class="card">
+          <div class="jesus card-body">
+            <!-- Reproductor de audio de Jesús -->
+            <audio id="audioPlayerJesus" src="/media/FAST.mp3"></audio>
+          </div>
+          <h2 class="card-title">Jesus</h2>
+          <p class="card-text text-jesus">CEO</p>
+        </div>
+      </div>
+    
+      <!-- Miembro del equipo: Arnau -->
+      <div class="team-member"data-bs-toggle="modal" data-bs-target="#arnauModal" draggable="true" ondragstart="drag(event)">
+        <div class="card">
+          <div class="arnau card-body">
+            <!-- Reproductor de audio de Arnau -->
+            <audio id="audioPlayerArnau" src="/media/EnPaz.mp3"></audio>
+          </div>
+          <h2 class="card-title">Arnau</h2>
+          <p class="card-text text-arnau">CEO</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Popup Jesús -->
+    <div class="modal fade" id="jesusModal" tabindex="-1" aria-labelledby="jesusModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Encabezado del modal para el boton cerrar-->
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Carrusel de video del modal -->
+            <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+              <!-- Indicadores del carrusel -->
+              <ol class="carousel-indicators">
+                <li data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#imageCarousel" data-bs-slide-to="1"></li>
+              </ol>
+            
+              <!-- Contenido del carrusel -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <!-- Video 1 del carrusel -->
+                  <video class="modal-video" controls autoplay muted>
+                    <source src="/media/EnPaz.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="carousel-item">
+                  <!-- Video 2 del carrusel -->
+                  <video class="modal-video" controls muted>
+                    <source src="/media/FAST.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup Arnau -->
+    <div class="modal fade" id="arnauModal" tabindex="-1" aria-labelledby="arnauModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Encabezado del modal -->
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Carrusel de imágenes del modal -->
+            <div id="arnauImageCarousel" class="carousel slide" data-bs-ride="carousel">
+              <!-- Indicadores del carrusel -->
+              <ol class="carousel-indicators">
+                <li data-bs-target="#arnauImageCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#arnauImageCarousel" data-bs-slide-to="1"></li>
+              </ol>
+    
+              <!-- Contenido del carrusel -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <!-- Video del carrusel -->
+                  <video class="modal-video" controls autoplay muted>
+                    <source src="/media/FAST.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="carousel-item">
+                  <!-- Video del carrusel -->
+                  <video class="modal-video" controls muted>
+                    <source src="/media/EnPaz.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="about-us.js"></script>
+  </body>
+  </html>
